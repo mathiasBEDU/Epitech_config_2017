@@ -126,7 +126,8 @@ packages_list=(boost-devel.x86_64
 	       php-gettext-gettext.noarch
 	       php-phar-io-version.noarch
 	       php-theseer-tokenizer.noarch
-	       @xfce-desktop-environment)
+	       @xfce-desktop-environment
+	       expect)
 
 for package in "${packages_list[@]}"
 do
@@ -147,7 +148,5 @@ cp blih.py /usr/bin/blih
 ./build_csfml.sh
 
 # CONFIG EMACS
-mkdir /usr/share/confemacs/
-cp -R ./epitech-emacs/* /usr/share/confemacs/.
-ln -s /usr/share/confemacs/INSTALL.sh /usr/bin/confemacs
-
+cd epitech-emacs
+./INSTALL.sh
